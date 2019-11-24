@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your page</title>
+	
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        section p {
+            font-size: 2vw;
+            /* line-height: 1.5em; */
+        }
+
+        section h1 {
+            font-size: 2.8vw;
+        }
+
+        h2 {
+            font-size: 2.3vw;
+        }
+
+        footer p {
+            font-size: 1.2vw;
+            color: grey;
+        }
+
+        hr {
+            display: block; height: 1px;
+            border: 0; border-top: 1px solid #ccc;
+            margin: 1em 0; padding: 0;
+        }
+
+        .spacer {
+            margin: 10% 0 0 0;
+        }
+
+        .figure {
+            max-width: 100%;
+            overflow: hidden;
+            width: 90%;
+            /* height: 100%; */
+            /* Magic! */
+            /* max-height: 20vh; */
+        }
+
+        /* Desktop Stylez */
+
+        @media (min-width: 768px) { 
+            body {
+                max-width: 600px;
+                margin: 2em auto;
+            }
+
+            
+            section p {
+                font-size: 1vw;
+                line-height: 1.5em;
+            }
+
+            section h1 {
+                font-size: 1.8vw;
+            }
+
+            h2 {
+                font-size: 1.3vw;
+            }
+
+            footer p {
+                font-size: 0.2vw;
+            }
+
+        }
+
+        /* for older browser */
+
+        article, aside, footer, header, nav, section {
+            display:block;
+        }
+    
+    </style>
+	
+</head>
+<body>
+
+    <header>
+        <h2>header Überschrift h2</h2>
+        <p>This page is a test page.</p>
+    </header>
+
+    <hr>
+    
+    <nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/jquery/">jQuery</a>
+    </nav>
+    
+    <hr>
+    
+    <section>
+        <h1>section Überschrift H1</h1>
+        <p>The section tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.</p>
+    </section>
+
+    <hr>
+    
+    <article>
+        <h1>article h1</h1>
+        <p>The article tag specifies independent, self-contained content.</p>
+        <p>An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
+        <p>Potential sources for the article element:</p>
+        <ul>
+            <li>Forum post</li>
+            <li>Blog post</li>
+            <li>News story</li>
+            <li>Comment</li>
+        </ul>    
+            
+        <p>Basically these tags are <b>semantic elements</b> and the only real difference between them are readability and design preference.</p>
+        <p>You can read more about them here if you wish:</p>
+        <ul>
+            <li><a target="_blank" href='http://www.w3schools.com/html/html5_semantic_elements.asp'>html5_semantic_elements</a></li>
+            <li><a target="_blank" href='http://www.w3schools.com/tags/tag_article.asp'>tag article</a></li>
+            <li><a target="_blank" href='http://www.w3schools.com/tags/tag_section.asp'>tag section</a></li>
+        </ul>
+    </article>
+
+    <hr>
+
+    <aside>
+        <h4>aside content</h4>
+        <p>Should be related to the surrounding content.</p>
+    </aside>
+
+    <hr>
+
+    <figure>
+        <img srcset="img/mobile_v2.png 320w,
+                     img/tablet_v2.png 480w,
+                     img/desktop_v2.png 800w"
+             sizes="(max-width: 320px) 280px,
+                    (max-width: 480px) 440px,
+                    800px"
+             src="img/desktop.png" alt="srcset images">
+        <figcaption>For Sourcesets, 'srcset', go to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">devoloper.mozilla</a>.</figcaption>
+    </figure>
+
+    <hr>
+    
+    <div class="spacer"></div>
+
+    <hr>
+    
+    <footer>
+        <p>Footer, posted by: Mr. Example</p>
+        <p>Contact information: <a href="mailto:someone@example.com">
+        someone@example.com</a>.</p>
+        <p>(c) 2019 The Example company</p>
+    </footer>
+	
+</body>
+</html>

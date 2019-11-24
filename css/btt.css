@@ -1,0 +1,16 @@
+/* ------ BACK TO TOP BUTTON STYLE ------ */
+
+.back-to-top {
+    /* background-color: #40444b; */
+    background-color: #42A5F5;
+	bottom: 2em;
+	color: rgb(255, 255, 255);
+	display: none;
+	opacity:0.7;
+	padding: 1em;
+	position: fixed;
+	right: 1.5em;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}

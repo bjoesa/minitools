@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>srcset</title>
+    
+    <link rel="stylesheet" href="css/srcset-example.css">
+
+    <!-- Back to top button -->
+    <link href="css/btt.css" rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script src="js/btt.js"></script>
+
+    <style>
+
+        /* Desktop Style */
+
+        @media (min-width: 768px) { 
+
+            .content {
+                margin: 0px 5% 0px 5%;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+        }
+
+        /* Mobile Style */
+
+        @media (max-width: 768px) { 
+            
+            h1, h2 {
+                padding-left: 20px;
+            }
+
+            h1 {
+                font-size: 2.0rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .header {
+                padding: 30px 0 60px 0;
+                background-size: 140%;
+            }
+        }
+
+        @media (max-width: 320px) { 
+
+            .header {
+                background-size: 160%;
+                padding-bottom: 40px;
+            }
+
+            nav ul{
+                font: 13px Sans-Serif;
+            }
+        }
+
+        section {
+            margin-top: 5%;
+        }
+
+        section p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        h1 {
+            padding-top: 2%;
+        }
+    
+        /* .spacer {
+            margin-top: 1%;
+        } */
+    </style>
+
+</head>
+<body>
+
+<div class="header">
+    <p class="p1">bjoern<b><i>sass</i></b></p>
+    <p class="p2">photographs</p>
+</div>
+
+<!-- https://www.w3schools.com/Css/css_navbar.asp -->
+<nav>
+    <ul>
+        <li><a href="#patagonia">Patagonia</a></li>
+        <li><a href="#alpes">Alpes</a></li>
+        <li><a href="#lappland">Lapland</a></li>
+        
+    </ul>
+</nav>
+
+<div class="content">
+    
+    <section id='patagonia'>
+        <h1>Patagonia</h1>   
+        
+        <figure>
+            <img srcset="img/tablet_v2.png 416w,
+                         img/tablet_v2.png 1024w,
+                         img/desktop_v2.png 1031w"
+                 sizes="(max-width: 400px) 280px,
+                        (max-width: 768px) 440px,
+                        800px"
+                 src="img/desktop_v2.png" alt="srcset images">
+            <figcaption class="padding-20px">&#8673; For Sourcesets, 'srcset', go to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">devoloper.mozilla</a>.</figcaption>
+        </figure>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe qui consequatur eius eveniet sapiente. Cupiditate id voluptatum accusantium eos. Nobis voluptatum quidem inventore doloremque eum provident laboriosam minima harum corrupti.</p>
+    
+    </section>
+
+    <!-- <div class="spacer"></div> -->
+
+    <section id='alpes'>
+        <h1>Alpes</h1>   
+
+        <figure>
+            <img src="https://static1.imaggeo.egu.eu/media/thumbs/previews/2018/02/15/13049.jpg.1024x768_q85.webp" 
+                alt="Refuge in a cloudscape">
+            <figcaption>&#8673; Credit: Julien Seguinot (distributed via <a href="https://imaggeo.egu.eu/view/13049/" target="_blank">imaggeo.egu.eu</a>)</figcaption>
+        </figure>
+    </section>
+
+</div>
+
+<footer>
+    <p>Footer, posted by: Mr. Example</p>
+    <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    <p>(c) 2019 The Example company</p>
+    <p style="color: blue;">Current design: <strong id="current">unknown</strong></p>
+    
+    <script>
+            /* JavaScript Media Queries 
+            https://www.sitepoint.com/javascript-media-queries/
+            */
+    
+            if (matchMedia) {
+                const mq = window.matchMedia("(min-width: 768px)");
+                mq.addListener(WidthChange);
+                WidthChange(mq);
+            }
+    
+            // media query change
+            function WidthChange(mq) {
+            
+                const msg = (mq.matches ? "more" : "less") + " than 768 pixels";
+                document.getElementById("current").firstChild.nodeValue = msg;
+            
+            }
+    
+    </script>
+</footer>
+	
+</body>
+</html>
