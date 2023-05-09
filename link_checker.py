@@ -1,3 +1,17 @@
+#!/usr/bin/python3
+
+"""Check a Website (URL) for broken links.
+
+This little helper program was made to check website and link status on a given Website.
+
+Typical usage example:
+
+    Simply execute the whole code. 
+    You'll be asked to provide an URL.
+    Website and link status will be printed.
+
+"""
+
 from bs4 import BeautifulSoup
 import urllib3
 import certifi
